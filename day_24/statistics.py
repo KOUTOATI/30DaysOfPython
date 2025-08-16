@@ -106,7 +106,10 @@ numpy_int_arr
 #
 np.array([-3, -2, 0, 1,2,3], dtype='bool')
 #
+normal_array = np.random.normal(79, 15, 80)
+normal_array
 from scipy import stats
+import matplotlib.pyplot as plt
 np_normal_dis = np.random.normal(5, 0.5, 1000) # mean,
 np_normal_dis
 ## min, max, mean, median, sd
@@ -117,4 +120,23 @@ print('median: ', np.median(np_normal_dis))
 print('mode: ', stats.mode(np_normal_dis))
 print('sd: ', np.std(np_normal_dis))
 plt.hist(np_normal_dis, color="grey", bins=21)
+plt.show()
+#
+temp = np.array([1,2,3,4,5])
+pressure = temp * 2 + 5
+pressure
+plt.plot(temp,pressure)
+plt.xlabel('Temperature in oC')
+plt.ylabel('Pressure in atm')
+plt.title('Temperature vs Pressure')
+plt.xticks(np.arange(0, 6, step=0.5))
+plt.show()
+#
+import seaborn as sns 
+mu = 28
+sigma = 15
+samples = 100000
+x = np.random.normal(mu, sigma, samples)
+ax = sns.distplot(x)
+ax.set(xlabel="x", ylabel='y')
 plt.show()
