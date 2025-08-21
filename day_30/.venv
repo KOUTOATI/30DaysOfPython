@@ -1,0 +1,5 @@
+# Clé secrète pour les tokens JWT
+SECRET_KEY="votre-super-cle-secrete-ici"
+
+# URL de la base de données. Utilisez sqlite:///./monuments.db pour un fichier local.
+DATABASE_URL="mongodb+srv://koutoatipaulin:devpaulingameli11@30daysofpython.lhjmfyf.mongodb.net/?retryWrites=true&w=majority&appName=30DaysOfPython"
